@@ -9,10 +9,10 @@
 # 모델링
 
 ## 논리
-![image](https://github.com/user-attachments/assets/895a11c5-05d1-4a8d-a5aa-0d77732a2bb2)
+![image](https://github.com/user-attachments/assets/9ccc8a79-e328-4013-b20c-127a24e306a6)
 
 ## 물리
-![image](https://github.com/user-attachments/assets/891394bf-f4ec-479d-a4b1-8c2ce925e542)
+![image](https://github.com/user-attachments/assets/a7b72365-c50a-4a53-9a00-132b635904ab)
 
 # 각 컬럼 설명
 
