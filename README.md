@@ -12,7 +12,7 @@
 ![image](https://github.com/user-attachments/assets/895a11c5-05d1-4a8d-a5aa-0d77732a2bb2)
 
 ## 물리
-![image](https://github.com/user-attachments/assets/b31c23d6-e5db-44d4-9e21-13ba64e5a1e5)
+![image](https://github.com/user-attachments/assets/891394bf-f4ec-479d-a4b1-8c2ce925e542)
 
 # 각 컬럼 설명
 
