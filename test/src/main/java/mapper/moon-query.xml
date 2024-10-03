@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <comment/>
+    <entry key="allMoon">
+        SELECT A.MOON_NAME, B.RISK_NAME
+        FROM MOON A
+        JOIN RISK B ON B.RISK_ID = A.RISK_ID
+    </entry>
+
+    <entry key = "insertMoon">
+        INSERT INTO MOON
+        (
+        MOON_CODE
+        , MOON_NAME
+        , RISK_RANK
+        )
+        VALUE
+        (
+        CONCAT ('#', ?)
+        , ?
+        , ?
+    </entry>
+
+    <entry key="mainMoon">
+        SELECT A.MOON_NAME, B.RISK_NAME
+        FROM MOON A
+        JOIN RISK B ON B.RISK_ID = A.RISK_ID
+        WHERE A.RISK_ID = 'S', 'A';
+    </entry>
+
+    <entry key="viewMoonCode">
+        SELECT
+        MOON_CODE,
+        MOON_NAME
+    </entry>
+
+    <entry key="updateMoon">
+        UPDATE MOON
+        SET MOON_CODE = ?,
+        MOON_NAME = ?,
+        RISK_RANK = ?
+        WHERE MOON_CODE
+    </entry>
+
+</properties>
