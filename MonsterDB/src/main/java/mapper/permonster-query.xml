@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <comment/>
+    <entry key = "perMoon">
+        SELECT
+        A.MONSTER_NAME,
+        M.MOON_NAME
+        FROM MONSTER A
+        LEFT JOIN SIZE B ON B.SIZE_ID = A.SIZE_ID
+        LEFT JOIN RISK C ON C.RISK_RANK = A.RISK_RANK
+        LEFT JOIN SPAWN D ON D.SPAWN_ID = A.SPAWN_ID
+        LEFT JOIN INTERIOR E ON E.INTERIOR_ID = A.INTERIOR_ID
+        JOIN PERMONSTER Z ON Z.MONSTER_CODE = A.MONSTER_CODE
+        JOIN MOON M ON M.MOON_CODE = Z.MOON_CODE
+        ORDER BY M.MOON_NAME
+    </entry>
+
+</properties>
