@@ -5,6 +5,7 @@ import model.MoonDAO;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Scanner;
 
@@ -72,8 +73,8 @@ public class UI {
             int answer = sc.nextInt();
             switch (answer) {
                 case 0 : dbRule(); break;
-                case 1 : monsDAO.allMonster(con); closeSet(rset, stmt, con); break;
-                case 2 : System.out.println(monsDAO.monsterRank(con)); closeSet(rset, stmt, con); break;
+                case 1 : monsDAO.allMonster(con); break;
+                case 2 : System.out.println(monsDAO.monsterRank(con)); break;
                 case 3 :
                     System.out.println("1. 이름 검색");
                     System.out.println("2. 위험도 검색");
@@ -88,13 +89,12 @@ public class UI {
                     } else {
                         System.out.println(red + "올바르게 입력바랍니다. (1, 2, 3 = 선택1)" + exit + BACK_BLACK);
                     }
-                    closeSet(rset, stmt, con);
                     break;
-                case 4 : monsDAO.insertUI(); closeSet(rset, stmt, con); break;
-                case 5 : monsDAO.updateMonster(con); closeSet(rset, stmt, con); break;
-                case 6 : monsDAO.deleteMonster(con); closeSet(rset, stmt, con); break;
-                case 7 : moonDAO.allMoon(con); closeSet(rset, stmt, con); break;
-                case 8 : System.out.println(moonDAO.moonRank(con)); closeSet(rset, stmt, con); break;
+                case 4 : monsDAO.insertUI(); break;
+                case 5 : monsDAO.updateMonster(con); break;
+                case 6 : monsDAO.deleteMonster(con); break;
+                case 7 : moonDAO.allMoon(con); break;
+                case 8 : System.out.println(moonDAO.moonRank(con)); break;
                 case 9 :
                     System.out.println("1. 이름 검색");
                     System.out.println("2. 위험도 검색");
@@ -106,11 +106,10 @@ public class UI {
                     } else {
                         System.out.println(red + "올바르게 입력바랍니다. (1, 2 = 선택1)" + exit + BACK_BLACK);
                     }
-                    closeSet(rset, stmt, con);
                     break;
-                case 10 : moonDAO.insertUI(); closeSet(rset, stmt, con); break;
-                case 11 : moonDAO.updateMoon(con); closeSet(rset, stmt, con); break;
-                case 12 : moonDAO.deleteMoon(con); closeSet(rset, stmt, con); break;
+                case 10 : moonDAO.insertUI(); break;
+                case 11 : moonDAO.updateMoon(con); break;
+                case 12 : moonDAO.deleteMoon(con); break;
                 case 100 :
                     System.out.println(aqua + "TTTTTTTTTTTTTTTTT    HH          HH          AAAA          NNN          NN    KKK        KK           YYY          YYY           OOO           UU           UU");
                     System.out.println("TTTTTTTTTTTTTTTTT    HH          HH         AA  AA         NNNN         NN    KKK     KKK               YYY      YYY         OO       OO       UU           UU");
@@ -123,12 +122,6 @@ public class UI {
                     System.exit(0);
             }
         }
-    }
-
-    public void closeSet(ResultSet rset, Statement stmt, Connection con) {
-        close(rset);
-        close(stmt);
-        close(con);
     }
 
     public void dbRule() {
@@ -150,5 +143,4 @@ public class UI {
         System.out.println(green + "5. 해당 공지사항은 근무자들간에 공지사항이 있을 때 꼭 수정바랍니다.");
         System.out.println(exit);
     }
-
 }
