@@ -1,4 +1,5 @@
 ## Motive : Lethal Company
+https://store.steampowered.com/app/1966720/Lethal_Company/
 
 # Information
 LethalCompany라는 게임의 괴물들을 데이터베이스에 쌓아둔 데이터베이스로 괴물들을 검색하고 업데이트하고 제거해줄 수 있는 기능을 가진 데이터베이스입니다.
